@@ -1,0 +1,9 @@
+---
+- name: Copy a file from the control node to remote hosts
+  hosts: all
+  become: true
+  tasks:
+  - name: Copy file
+    copy:
+     src: /home/ubuntu/index.txt
+     dest: /home/ubuntu

@@ -1,0 +1,9 @@
+---
+- name: Synchronize a directory from the control node to remote hosts
+  hosts: all
+  become: true
+  tasks:
+    - name: Synchronize directory
+      synchronize:
+        src: /home/ubuntu/mydir
+        dest: /home/ubuntu
